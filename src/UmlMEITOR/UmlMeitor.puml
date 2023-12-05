@@ -135,25 +135,25 @@ class empleado{
     + actualizar(): void
 }
 
-venta "1...*" o-- "1" cliente: tiene <
+venta "1...*" --o "1" cliente: tiene <
 articulo "1...*" *-- "1...*" venta: tiene <
 
-registroCompra "1...*" --* "1" proveedor
+registroCompra "1...*" *-- "1" proveedor
 registroCompra "1...*" --* "1" compra
 
-registroVenta "1...*" --* "1" venta
+registroVenta "1...*" *-- "1" venta
 registroVenta "1...*" --* "1" cliente
 
-empresa "1" --* "1...*" jefe
-empresa "1" --* "1...*" empleado
+empresa "1" *-- "1...*" jefe
+empresa "1" *-- "1...*" empleado
 
-compra "1...*" o-- "1" proveedor
-compra "1...*" *-- "1" empresa
-stock "1...*" *-- "1" empresa
+compra "1...*" --o "1" proveedor
+compra "1...*" --* "1" empresa
+stock "1...*" --* "1" empresa
 articulo "1...*" *-- "1" stock
 articulo "1...*" o-- "1" categoria
 articulo "1...*" *-- "1...*" compra
-usuario "1...*" *-- "1" permiso
+usuario "1...*" --* "1" permiso
 
 cliente --|> usuario
 proveedor --|> usuario
