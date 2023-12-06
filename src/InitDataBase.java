@@ -18,7 +18,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class Prueba {
+public class InitDataBase {
     public static void main(String[] args) {
         ArrayList<Cliente> c = new ArrayList<Cliente>();
 
