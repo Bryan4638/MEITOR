@@ -1,0 +1,14 @@
+@startuml Empleado
+!startsub Empleado
+skinparam ClassAttributeIconSize 0
+
+class empleado{
+    -id: String
+    -zonaDeTrabajo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+
+@enduml
+!endsub

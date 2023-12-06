@@ -1,0 +1,14 @@
+@startuml Usuario
+!startsub Usuario
+skinparam ClassAttributeIconSize 0
+
+class usuario {
+    - id: String
+    - name: String
+    - password : String
+    - email: String
+    + actualizarPerfil(String, String, String ): void
+}
+
+@enduml
+!endsub

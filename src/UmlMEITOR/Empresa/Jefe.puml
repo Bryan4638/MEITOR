@@ -1,0 +1,14 @@
+@startuml Jefe
+!startsub Jefe
+skinparam ClassAttributeIconSize 0
+
+class jefe{
+    -id: String
+    -cargo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+
+@enduml
+@!endsub

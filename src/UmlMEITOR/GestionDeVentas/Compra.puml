@@ -1,0 +1,16 @@
+@startuml Compra
+!startsub Compra
+skinparam ClassAttributeIconSize 0
+
+class compra{
+    - idCompra: String
+    - proveedor: Proveedor
+    - empresa: Empresa
+    - articulos: ArralyList<Articulo>
+    + calcularValorDeCompra(): float
+    + finalizarCompra(): void
+    + eliminarArticulos(): void
+}
+
+@enduml
+!endsub

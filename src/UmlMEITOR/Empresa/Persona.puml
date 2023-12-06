@@ -1,0 +1,13 @@
+@startuml Persona
+!startsub Persona
+skinparam ClassAttributeIconSize 0
+
+class persona{
+    - name: String
+    - email: String
+    - edad: int
+    + actualizarPerfil(String, String, int): void
+}
+
+@enduml
+!endsub

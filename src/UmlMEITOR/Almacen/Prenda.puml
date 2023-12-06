@@ -1,0 +1,12 @@
+@startuml Prenda
+!startsub Prenda
+skinparam ClassAttributeIconSize 0
+
+class prenda{
+    - id: String
+    - nombre: String
+    - image: String
+}
+
+@enduml
+!endsub
