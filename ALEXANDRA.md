@@ -8,7 +8,7 @@
 - Password: admin123
 
 ## GestionDeVentas Alexandra Rivero
-
+![Alt text](UmlIdividual/Sandra/Sandra.png)
 ### Articulo
 
  Extiende la clase Prenda e implementa Serializable y ArticuloInterface. Esta clase está diseñada para gestionar los detalles específicos de los artículos en venta, incluyendo su categoría y su asociación con el stock.

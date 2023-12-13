@@ -9,6 +9,8 @@
 
 ## Login Daniela Rodriguez
 
+![Texto Alternativo](UmlIdividual/Daniela/Daniela.png)
+
 ### Cliente
 
 Esta clase extiende la funcionalidad de la clase Usuario e implementa la interfaz Serializable. Está diseñada para gestionar la información relacionada con los clientes en el sistema, incluyendo su identificación, nombre, correo electrónico, contraseña, dinero disponible, permisos y ventas asociadas.

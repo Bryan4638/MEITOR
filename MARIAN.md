@@ -8,7 +8,7 @@
 - Password: admin123
 
 ## Almacen Marian Betancourt
-
+![Alt text](UmlIdividual/Marian/Marian.png)
 ### RegistroCompra 
 
  Implementa la interfaz Serializable y se utiliza para registrar las compras realizadas en el sistema. Gestiona detalles como el proveedor, la compra en sí, la fecha y hora del registro.
