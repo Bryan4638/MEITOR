@@ -15,10 +15,15 @@ import CodigoMEITOR.LoginRegister.Clases.Proveedor;
 import Controlers.GenerarID;
 
 import java.io.*;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+=======
+import java.util.ArrayList;
+
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
 
 public class InitDataBase {
     public static void main(String[] args) {
@@ -26,6 +31,7 @@ public class InitDataBase {
 
         String name = "Admin";
         String email = "admin@gmail.com";
+<<<<<<< HEAD
         String password = "admin123";
         String fechaString = String.valueOf(LocalDate.now());
         Date fecDate = new Date();
@@ -37,6 +43,15 @@ public class InitDataBase {
         }
         Cliente cliente = new Cliente(new GenerarID().generarIDUsuario(name, email), name, email, password, 0,
                 new Permiso(new GenerarID().generarRandomID(), "Administrador"), new Venta(), fecDate);
+=======
+        String password ="admin123";
+        Cliente cliente = new Cliente(new GenerarID().generarIDUsuario(name, email),name, email, password, 0, new Permiso(new GenerarID().generarRandomID(), "Administrador"), new Venta() {
+            @Override
+            public void eliminarArticulo(Object id) {
+
+            }
+        });
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
         c.add(cliente);
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/BaseDeDatos/Cliente.txt"))) {
             oos.writeObject(c);
@@ -62,15 +77,23 @@ public class InitDataBase {
             e.printStackTrace();
         }
 
+<<<<<<< HEAD
         try (ObjectOutputStream oos = new ObjectOutputStream(
                 new FileOutputStream("src/BaseDeDatos/LogRegistroCompra.txt"))) {
+=======
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/BaseDeDatos/LogRegistroCompra.txt"))) {
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
             oos.writeObject(new ArrayList<RegistroCompra>());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+<<<<<<< HEAD
         try (ObjectOutputStream oos = new ObjectOutputStream(
                 new FileOutputStream("src/BaseDeDatos/LogRegistroVenta.txt"))) {
+=======
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/BaseDeDatos/LogRegistroVenta.txt"))) {
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
             oos.writeObject(new ArrayList<RegistroVenta>());
         } catch (IOException e) {
             e.printStackTrace();
@@ -82,6 +105,7 @@ public class InitDataBase {
             e.printStackTrace();
         }
 
+<<<<<<< HEAD
         ArrayList<ArticuloInterface> articulos = new ArrayList<ArticuloInterface>();
         for (int i = 1; i <= 10; i++) {
             ArticuloInterface articulo = new Articulo(new GenerarID().generarRandomID(), "Blusa" + i,
@@ -116,6 +140,28 @@ public class InitDataBase {
                     new Stock(12 + i, 8 + i),
                     new Categoria(new GenerarID().generarRandomID(), "Sudaderas", "para todos" + i),
                     "/img/ModelosDePrendas/modeloSudadera" + i + ".png");
+=======
+
+        ArrayList<ArticuloInterface> articulos = new ArrayList<ArticuloInterface>();
+        for (int i = 1; i <= 10; i++) {
+            ArticuloInterface articulo = new Articulo(new GenerarID().generarRandomID(), "Blusa"+i, new Stock(16+i, 30+i), new Categoria(new GenerarID().generarRandomID(), "Blusas de mujer", "para mujeres"+i), "/img/ModelosDePrendas/modeloBlusaMujer"+i+".png");
+            articulos.add(articulo);
+        }
+        for (int i = 1; i <= 10; i++) {
+            ArticuloInterface articulo = new Articulo(new GenerarID().generarRandomID(), "Pantalon de hombre"+i, new Stock(30+i, 16+i), new Categoria(new GenerarID().generarRandomID(), "Pantalón De Hombre", "para hombre"+i), "/img/ModelosDePrendas/modeloPantalonHombre"+i+".png");
+            articulos.add(articulo);
+        }
+        for (int i = 1; i <= 7; i++) {
+            ArticuloInterface articulo = new Articulo(new GenerarID().generarRandomID(), "Pantalon de mujer"+i, new Stock(20+i, 12+i), new Categoria(new GenerarID().generarRandomID(), "Pantalón de mujer", "para mujeres"+i), "/img/ModelosDePrendas/modeloPantalonMujer"+i+".png");
+            articulos.add(articulo);
+        }
+        for (int i = 1; i <= 8; i++) {
+            ArticuloInterface articulo = new Articulo(new GenerarID().generarRandomID(), "Pulover"+i, new Stock(12+i, 8+i), new Categoria(new GenerarID().generarRandomID(), "Pulover de Hombre", "para hombres"+i), "/img/ModelosDePrendas/modeloPuloberHombre"+i+".png");
+            articulos.add(articulo);
+        }
+        for (int i = 1; i <= 11; i++) {
+            ArticuloInterface articulo = new Articulo(new GenerarID().generarRandomID(), "Sudadera"+i, new Stock(12+i, 8+i), new Categoria(new GenerarID().generarRandomID(), "Sudaderas", "para todos"+i), "/img/ModelosDePrendas/modeloSudadera"+i+".png");
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
             articulos.add(articulo);
         }
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/BaseDeDatos/Articulos.txt"))) {
@@ -124,6 +170,14 @@ public class InitDataBase {
             e.printStackTrace();
         }
 
+<<<<<<< HEAD
     }
 
+=======
+
+
+    }
+
+
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
 }

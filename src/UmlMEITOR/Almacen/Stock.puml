@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Stock
 !startsub Stock
 skinparam ClassAttributeIconSize 0
@@ -16,3 +17,23 @@ class stock{
 
 !endsub
 @enduml
+=======
+@startuml Stock
+!startsub Stock
+skinparam ClassAttributeIconSize 0
+
+class stock{
+    -idStock: String
+    - precioTotal: float
+    - precio : float
+    - cantidadEnStock: int
+    - empresa: Empresa
+    + incrementarStock(int): void
+    + decrementarStock(int): void
+    + verificarNivelStock(): int
+    + actualizarPrecio(float): void
+}
+
+!endsub
+@startuml
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

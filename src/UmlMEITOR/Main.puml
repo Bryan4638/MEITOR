@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 @startuml Main
 skinparam ClassAttributeIconSize 0
 
 !includesub Almacen/Prenda.puml!Prenda
 !includesub Almacen/RegistroCompra.puml!RegistroCompra
 !includesub Almacen/RegistroVenta.puml!RegistroVenta
+=======
+@startuml Ferreteria
+skinparam ClassAttributeIconSize 0
+
+!includesub Almacen/Prenda.puml!Prenda
+!includesub Almacen/RegistroDeCompra.puml!RegistroDeCompra
+!includesub Almacen/RegistroDeVentas.puml!RegistroDeVentas
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
 !includesub Almacen/Stock.puml!Stock
 
 
@@ -20,7 +29,11 @@ skinparam ClassAttributeIconSize 0
 !includesub Login/Cliente.puml!Cliente
 !includesub Login/Permiso.puml!Permiso
 !includesub Login/Proveedor.puml!Proveedor
+<<<<<<< HEAD
 !includesub Login/Usuario.puml!Usuario
+=======
+!includesub Login/Ususario.puml!Ususario
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
 
 
 venta "1...*" --o "1" cliente: tiene <

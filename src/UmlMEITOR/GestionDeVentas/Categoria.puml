@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Categoria
 !startsub Categoria
 skinparam ClassAttributeIconSize 0
@@ -11,3 +12,18 @@ class categoria{
 
 !endsub
 @enduml
+=======
+@startuml Categoria
+!startsub Categoria
+skinparam ClassAttributeIconSize 0
+
+class categoria{
+    -idCategoria: String 
+    -nombre: String
+    - descripcion: String
+    + editarDescripcion(String): void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Venta
 !startsub Venta
 skinparam ClassAttributeIconSize 0
@@ -13,3 +14,20 @@ class venta{
 
 !endsub
 @enduml
+=======
+@startuml Venta
+!startsub Venta
+skinparam ClassAttributeIconSize 0
+
+class venta{
+    - idVenta: String
+    - cliente : Cliente
+    - articulos : ArrayList<Articulo>
+    - calcularValorDeVenta() : flaot
+    - finalizarVenta() : void
+    - eliminarArticulos(String) : void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

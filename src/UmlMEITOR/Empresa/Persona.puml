@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Persona
 !startsub Persona
 skinparam ClassAttributeIconSize 0
@@ -11,3 +12,18 @@ class persona{
 
 !endsub
 @enduml
+=======
+@startuml Persona
+!startsub Persona
+skinparam ClassAttributeIconSize 0
+
+class persona{
+    - name: String
+    - email: String
+    - edad: int
+    + actualizarPerfil(String, String, int): void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

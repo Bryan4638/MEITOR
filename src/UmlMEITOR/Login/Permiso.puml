@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Permiso
 !startsub Permiso
 skinparam ClassAttributeIconSize 0
@@ -9,3 +10,16 @@ class permiso {
 
 !endsub
 @enduml
+=======
+@startuml Permiso
+!startsub Permiso
+skinparam ClassAttributeIconSize 0
+
+class permiso {
+    - id: String
+    - nombre: String
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

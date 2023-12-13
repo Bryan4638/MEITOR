@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Empresa
 !startsub Empresa
 skinparam ClassAttributeIconSize 0
@@ -13,3 +14,20 @@ class empresa{
 
 !endsub
 @enduml
+=======
+@startuml Empresa
+!startsub Empresa
+skinparam ClassAttributeIconSize 0
+
+class empresa{
+    -nombre: String
+    - proveedores: ArralyList<Proveedor>
+    - jefes: Jefe
+    - empleados: Empleados
+    + despedirEmpleado(Empleado): void
+    + despedirJefe(Jefe): void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

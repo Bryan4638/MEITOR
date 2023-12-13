@@ -155,11 +155,14 @@ articulo "1...*" o-- "1" categoria
 articulo "1...*" *-- "1...*" compra
 usuario "1...*" --* "1" permiso
 
+<<<<<<< HEAD
 registroCompra "1...*" --* "1" stock
 registroVenta "1...*" --* "1" stock
 prenda "1...*" --* "1" stock
 
 
+=======
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
 cliente --|> usuario
 proveedor --|> usuario
 prenda <|-- articulo

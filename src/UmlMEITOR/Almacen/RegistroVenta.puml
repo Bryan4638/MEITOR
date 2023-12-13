@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml RegistroVenta
 !startsub RegistroVenta
 skinparam ClassAttributeIconSize 0
@@ -15,3 +16,21 @@ class registroVenta{
 !endsub
 @enduml
 
+=======
+@startuml RegistroVenta
+!startsub RegistroVenta
+skinparam ClassAttributeIconSize 0
+
+class registroVenta{
+    - cliente: Cliente
+    - venta: Venta
+    - fecha: LocalDate
+    - hora: LOcalTime
+    + logRegistroVenta(): void
+    + leerLogRegistroVenta(): ArralyList<RegistroVenta>
+    + eliminarRegistro(): void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Empleado
 !startsub Empleado
 skinparam ClassAttributeIconSize 0
@@ -12,3 +13,19 @@ class empleado{
 
 !endsub
 @enduml
+=======
+@startuml Empleado
+!startsub Empleado
+skinparam ClassAttributeIconSize 0
+
+class empleado{
+    -id: String
+    -zonaDeTrabajo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

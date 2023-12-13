@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Proveedor
 !startsub Proveedor
 skinparam ClassAttributeIconSize 0
@@ -13,3 +14,20 @@ class proveedor {
 
 !endsub
 @enduml
+=======
+@startuml Proveedor
+!startsub Proveedor
+skinparam ClassAttributeIconSize 0
+
+class proveedor {
+    - dinero: float
+    - permiso: Permiso
+    - compra: Compra
+    + actualizar() : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622

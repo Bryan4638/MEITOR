@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @startuml Cliente
 !startsub Cliente
 skinparam ClassAttributeIconSize 0
@@ -14,3 +15,21 @@ class cliente {
 
 !endsub
 @enduml
+=======
+@startuml Cliente
+!startsub Cliente
+skinparam ClassAttributeIconSize 0
+
+class cliente {
+    - dinero: float
+    - permiso : Permiso
+    - venta : Venta
+    + actualizar() : void
+    + actualizarDinero(float) : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+@enduml
+!endsub
+>>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
