@@ -7,186 +7,145 @@ import java.awt.*;
 
 public class CardCliente extends javax.swing.JPanel {
 
-    private JPanel panel;
-    private Cliente cliente;
+        private JPanel panel;
+        private Cliente cliente;
 
-    public CardCliente(Cliente cliente, JPanel panel) {
-<<<<<<< HEAD
-        this.cliente = cliente;
-        this.panel = panel;
-=======
-        this.cliente=cliente;
-        this.panel=panel;
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
-        initComponents();
-    }
+        public CardCliente(Cliente cliente, JPanel panel) {
+                this.cliente = cliente;
+                this.panel = panel;
+                initComponents();
+        }
 
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+        @SuppressWarnings("unchecked")
+        // <editor-fold defaultstate="collapsed" desc="Generated Code">
+        private void initComponents() {
 
-        buttonEdit = new javax.swing.JButton();
-        buttonDelete = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-<<<<<<< HEAD
-        labelFecha = new javax.swing.JLabel();
-=======
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
+                buttonEdit = new javax.swing.JButton();
+                buttonDelete = new javax.swing.JButton();
+                jLabel1 = new javax.swing.JLabel();
+                jLabel2 = new javax.swing.JLabel();
+                jLabel3 = new javax.swing.JLabel();
+                jLabel4 = new javax.swing.JLabel();
+                labelFecha = new javax.swing.JLabel();
 
-        buttonEdit.setBackground(new java.awt.Color(255, 255, 102));
-        buttonEdit.setFont(new java.awt.Font("Noto Sans CJK SC Medium", 0, 12)); // NOI18N
-        buttonEdit.setText("Editar");
-        buttonEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonEditActionPerformed(evt);
-            }
-        });
+                buttonEdit.setBackground(new java.awt.Color(255, 255, 102));
+                buttonEdit.setFont(new java.awt.Font("Noto Sans CJK SC Medium", 0, 12)); // NOI18N
+                buttonEdit.setText("Editar");
+                buttonEdit.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                buttonEditActionPerformed(evt);
+                        }
+                });
 
-        buttonDelete.setBackground(new java.awt.Color(255, 51, 51));
-        buttonDelete.setFont(new java.awt.Font("Noto Sans CJK SC Medium", 0, 12)); // NOI18N
-        buttonDelete.setText("Eliminar");
-        buttonDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonDeleteActionPerformed(evt);
-            }
-        });
+                buttonDelete.setBackground(new java.awt.Color(255, 51, 51));
+                buttonDelete.setFont(new java.awt.Font("Noto Sans CJK SC Medium", 0, 12)); // NOI18N
+                buttonDelete.setText("Eliminar");
+                buttonDelete.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                buttonDeleteActionPerformed(evt);
+                        }
+                });
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText(cliente.getName());
+                jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                jLabel1.setText(cliente.getName());
 
-<<<<<<< HEAD
-        labelFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelFecha.setText(cliente.edad() + "");
+                labelFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                labelFecha.setText(cliente.edad() + "");
 
-=======
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText(cliente.getEmail());
+                jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                jLabel2.setText(cliente.getEmail());
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-<<<<<<< HEAD
-        jLabel3.setText(cliente.getDinero() + " $");
-=======
-        jLabel3.setText(cliente.getDinero()+" $");
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
+                jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                jLabel3.setText(cliente.getDinero() + " $");
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText(cliente.getPermiso().getNombre());
+                jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                jLabel4.setText(cliente.getPermiso().getNombre());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14)
-                                .addComponent(labelFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 131,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 176,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                                .addGap(32, 32, 32)
-                                .addComponent(buttonEdit)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonDelete)
-<<<<<<< HEAD
-                                .addContainerGap()));
-=======
-                                .addContainerGap())
-        );
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
-        layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(buttonEdit)
-                                        .addComponent(buttonDelete)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel4)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(3, 3, 3)
-<<<<<<< HEAD
-                                                .addGroup(layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel1)
-                                                        .addComponent(labelFecha)
-                                                        .addComponent(jLabel2))))
-                                .addGap(0, 16, Short.MAX_VALUE)));
-=======
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel1)
-                                                        .addComponent(jLabel2))))
-                                .addGap(0, 16, Short.MAX_VALUE))
-        );
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
-    }// </editor-fold>
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+                this.setLayout(layout);
+                layout.setHorizontalGroup(
+                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel1,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                131,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(14, 14, 14)
+                                                                .addComponent(labelFecha,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                131,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(14, 14, 14)
+                                                                .addComponent(jLabel2,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                176,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(14, 14, 14)
+                                                                .addComponent(jLabel3,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                130,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(14, 14, 14)
+                                                                .addComponent(jLabel4,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                159, Short.MAX_VALUE)
+                                                                .addGap(32, 32, 32)
+                                                                .addComponent(buttonEdit)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(buttonDelete)
+                                                                .addContainerGap()));
+                layout.setVerticalGroup(
+                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                                .addGap(18, 18, 18)
+                                                                .addGroup(layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                .addComponent(buttonEdit)
+                                                                                .addComponent(buttonDelete)
+                                                                                .addComponent(jLabel3)
+                                                                                .addComponent(jLabel4)
+                                                                                .addGroup(layout.createSequentialGroup()
+                                                                                                .addGap(3, 3, 3)
+                                                                                                .addGroup(layout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                                                .addComponent(jLabel1)
+                                                                                                                .addComponent(labelFecha)
+                                                                                                                .addComponent(jLabel2))))
+                                                                .addGap(0, 16, Short.MAX_VALUE)));
+        }// </editor-fold>
 
-    private void buttonEditActionPerformed(java.awt.event.ActionEvent evt) {
-        ClientEdit clientEdit = new ClientEdit(cliente);
-        clientEdit.setSize(913, 510);
-<<<<<<< HEAD
-        clientEdit.setLocation(0, 0);
-=======
-        clientEdit.setLocation(0,0);
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
+        private void buttonEditActionPerformed(java.awt.event.ActionEvent evt) {
+                ClientEdit clientEdit = new ClientEdit(cliente);
+                clientEdit.setSize(913, 510);
+                clientEdit.setLocation(0, 0);
 
-        panel.removeAll();
-        panel.add(clientEdit, BorderLayout.CENTER);
-        panel.revalidate();
-        panel.repaint();
-    }
+                panel.removeAll();
+                panel.add(clientEdit, BorderLayout.CENTER);
+                panel.revalidate();
+                panel.repaint();
+        }
 
-    private void buttonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
-        cliente.elimiarDatos();
-        AdminPanelCliente adminPanelCliente = new AdminPanelCliente();
-        adminPanelCliente.setSize(913, 510);
-<<<<<<< HEAD
-        adminPanelCliente.setLocation(0, 0);
-=======
-        adminPanelCliente.setLocation(0,0);
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
+        private void buttonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
+                cliente.elimiarDatos();
+                AdminPanelCliente adminPanelCliente = new AdminPanelCliente();
+                adminPanelCliente.setSize(913, 510);
+                adminPanelCliente.setLocation(0, 0);
 
-        panel.removeAll();
-        panel.add(adminPanelCliente, BorderLayout.CENTER);
-        panel.revalidate();
-        panel.repaint();
-    }
+                panel.removeAll();
+                panel.add(adminPanelCliente, BorderLayout.CENTER);
+                panel.revalidate();
+                panel.repaint();
+        }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
-    // Variables declaration - do not modify
-    private javax.swing.JButton buttonDelete;
-    private javax.swing.JButton buttonEdit;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-<<<<<<< HEAD
-    private javax.swing.JLabel labelFecha;
+        // Variables declaration - do not modify
+        private javax.swing.JButton buttonDelete;
+        private javax.swing.JButton buttonEdit;
+        private javax.swing.JLabel jLabel1;
+        private javax.swing.JLabel jLabel2;
+        private javax.swing.JLabel jLabel3;
+        private javax.swing.JLabel jLabel4;
+        private javax.swing.JLabel labelFecha;
 
 }
-=======
-
-}
-
->>>>>>> d08e3af713587066e5fa8cc066051b51c391f622
