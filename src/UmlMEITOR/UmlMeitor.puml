@@ -1,0 +1,169 @@
+@startuml
+class proveedor {
+    - dinero: float
+    - permiso: Permiso
+    - compra: Compra
+    + actualizar() : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+class usuario {
+    - id: String
+    - name: String
+    - password : String
+    - email: String
+    + actualizarPerfil(String, String, String ): void
+}
+
+class permiso {
+    - id: String
+    - nombre: String
+}
+
+class cliente {
+    - dinero: float
+    - permiso : Permiso
+    - venta : Venta
+    + actualizar() : void
+    + actualizarDinero(float) : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+class venta{
+    - idVenta: String
+    - cliente : Cliente
+    - articulos : ArrayList<Articulo>
+    - calcularValorDeVenta() : flaot
+    - finalizarVenta() : void
+    - eliminarArticulos(String) : void
+}
+
+class compra{
+    - idCompra: String
+    - proveedor: Proveedor
+    - empresa: Empresa
+    - articulos: ArralyList<Articulo>
+    + calcularValorDeCompra(): float
+    + finalizarCompra(): void
+    + eliminarArticulos(): void
+}
+
+class empresa{
+    -nombre: String
+    - proveedores: ArralyList<Proveedor>
+    - jefes: Jefe
+    - empleados: Empleados
+    + despedirEmpleado(Empleado): void
+    + despedirJefe(Jefe): void
+}
+
+class articulo{
+    - categoria: Categoria
+    - stock: Stock
+    + validarDisponivilidad(): boolean
+    + aplicarDescuento(float): void
+}
+
+class stock{
+    -idStock: String
+    - precioTotal: float
+    - precio : float
+    - cantidadEnStock: int
+    - empresa: Empresa
+    + incrementarStock(int): void
+    + decrementarStock(int): void
+    + verificarNivelStock(): int
+    + actualizarPrecio(float): void
+}
+
+class categoria{
+    -idCategoria: String 
+    -nombre: String
+    - descripcion: String
+    + editarDescripcion(String): void
+}
+
+class prenda{
+    - id: String
+    - nombre: String
+    - image: String
+}
+
+
+class registroCompra{
+    - proveedor: Proveedor
+    - compra: Compra
+    - fecha: LocalDate
+    - hora: LocalTime
+    + logRegistroCompra(): void
+    + leerLogRegistroCompra(): ArralyList<RegistroCompra>
+    + eliminarRegistro(): void
+}
+
+class registroVenta{
+    - cliente: Cliente
+    - venta: Venta
+    - fecha: LocalDate
+    - hora: LOcalTime
+    + logRegistroVenta(): void
+    + leerLogRegistroVenta(): ArralyList<RegistroVenta>
+    + eliminarRegistro(): void
+}
+
+class persona{
+    - name: String
+    - email: String
+    - edad: int
+    + actualizarPerfil(String, String, int): void
+}
+
+class jefe{
+    -id: String
+    -cargo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+
+class empleado{
+    -id: String
+    -zonaDeTrabajo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+
+venta "1...*" --o "1" cliente: tiene <
+articulo "1...*" *-- "1...*" venta: tiene <
+
+registroCompra "1...*" *-- "1" proveedor
+registroCompra "1...*" --* "1" compra
+
+registroVenta "1...*" *-- "1" venta
+registroVenta "1...*" --* "1" cliente
+
+empresa "1" *-- "1...*" jefe
+empresa "1" *-- "1...*" empleado
+
+compra "1...*" --o "1" proveedor
+compra "1...*" --* "1" empresa
+stock "1...*" --* "1" empresa
+articulo "1...*" *-- "1" stock
+articulo "1...*" o-- "1" categoria
+articulo "1...*" *-- "1...*" compra
+usuario "1...*" --* "1" permiso
+
+registroCompra "1...*" --* "1" stock
+registroVenta "1...*" --* "1" stock
+prenda "1...*" --* "1" stock
+
+
+cliente --|> usuario
+proveedor --|> usuario
+prenda <|-- articulo
+
+jefe --|> persona
+empleado --|> persona
+@enduml

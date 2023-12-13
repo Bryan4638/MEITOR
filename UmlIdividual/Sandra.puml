@@ -1,0 +1,40 @@
+@startuml
+class venta{
+    - idVenta: String
+    - cliente : Cliente
+    - articulos : ArrayList<Articulo>
+    - calcularValorDeVenta() : flaot
+    - finalizarVenta() : void
+    - eliminarArticulos(String) : void
+}
+
+class compra{
+    - idCompra: String
+    - proveedor: Proveedor
+    - empresa: Empresa
+    - articulos: ArralyList<Articulo>
+    + calcularValorDeCompra(): float
+    + finalizarCompra(): void
+    + eliminarArticulos(): void
+}
+class articulo{
+    - categoria: Categoria
+    - stock: Stock
+    + validarDisponivilidad(): boolean
+    + aplicarDescuento(float): void
+}
+class categoria{
+    -idCategoria: String 
+    -nombre: String
+    - descripcion: String
+    + editarDescripcion(String): void
+}
+
+articulo "1...*" o-- "1" categoria
+articulo "1...*" *-- "1...*" compra
+articulo "1...*" *-- "1...*" venta: tiene <
+
+
+
+
+@enduml

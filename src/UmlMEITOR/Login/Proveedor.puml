@@ -1,0 +1,15 @@
+@startuml Proveedor
+!startsub Proveedor
+skinparam ClassAttributeIconSize 0
+
+class proveedor {
+    - dinero: float
+    - permiso: Permiso
+    - compra: Compra
+    + actualizar() : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+!endsub
+@enduml

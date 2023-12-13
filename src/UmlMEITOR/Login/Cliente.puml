@@ -1,0 +1,16 @@
+@startuml Cliente
+!startsub Cliente
+skinparam ClassAttributeIconSize 0
+
+class cliente {
+    - dinero: float
+    - permiso : Permiso
+    - venta : Venta
+    + actualizar() : void
+    + actualizarDinero(float) : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+!endsub
+@enduml

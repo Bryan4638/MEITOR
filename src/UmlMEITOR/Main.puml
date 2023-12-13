@@ -1,0 +1,55 @@
+@startuml Main
+skinparam ClassAttributeIconSize 0
+
+!includesub Almacen/Prenda.puml!Prenda
+!includesub Almacen/RegistroCompra.puml!RegistroCompra
+!includesub Almacen/RegistroVenta.puml!RegistroVenta
+!includesub Almacen/Stock.puml!Stock
+
+
+!includesub Empresa/Empleado.puml!Empleado
+!includesub Empresa/Empresa.puml!Empresa
+!includesub Empresa/Jefe.puml!Jefe
+!includesub Empresa/PErsona.puml!Persona
+
+!includesub GestionDeVentas/Articulo.puml!Articulo
+!includesub GestionDeVentas/Categoria.puml!Categoria
+!includesub GestionDeVentas/Compra.puml!Compra
+!includesub GestionDeVentas/Venta.puml!Venta
+
+!includesub Login/Cliente.puml!Cliente
+!includesub Login/Permiso.puml!Permiso
+!includesub Login/Proveedor.puml!Proveedor
+!includesub Login/Usuario.puml!Usuario
+
+
+venta "1...*" --o "1" cliente: tiene <
+articulo "1...*" *-- "1...*" venta: tiene <
+
+registroCompra "1...*" *-- "1" proveedor
+registroCompra "1...*" --* "1" compra
+
+registroVenta "1...*" *-- "1" venta
+registroVenta "1...*" --* "1" cliente
+
+empresa "1" *-- "1...*" jefe
+empresa "1" *-- "1...*" empleado
+
+compra "1...*" --o "1" proveedor
+compra "1...*" --* "1" empresa
+stock "1...*" --* "1" empresa
+articulo "1...*" *-- "1" stock
+articulo "1...*" o-- "1" categoria
+articulo "1...*" *-- "1...*" compra
+usuario "1...*" --* "1" permiso
+
+cliente --|> usuario
+proveedor --|> usuario
+prenda <|-- articulo
+
+jefe --|> persona
+empleado --|> persona
+
+
+@enduml
+

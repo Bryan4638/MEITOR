@@ -1,0 +1,17 @@
+@startuml RegistroVenta
+!startsub RegistroVenta
+skinparam ClassAttributeIconSize 0
+
+class registroVenta{
+    - cliente: Cliente
+    - venta: Venta
+    - fecha: LocalDate
+    - hora: LOcalTime
+    + logRegistroVenta(): void
+    + leerLogRegistroVenta(): ArralyList<RegistroVenta>
+    + eliminarRegistro(): void
+}
+
+!endsub
+@enduml
+

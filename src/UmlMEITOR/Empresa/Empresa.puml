@@ -1,0 +1,15 @@
+@startuml Empresa
+!startsub Empresa
+skinparam ClassAttributeIconSize 0
+
+class empresa{
+    -nombre: String
+    - proveedores: ArralyList<Proveedor>
+    - jefes: Jefe
+    - empleados: Empleados
+    + despedirEmpleado(Empleado): void
+    + despedirJefe(Jefe): void
+}
+
+!endsub
+@enduml

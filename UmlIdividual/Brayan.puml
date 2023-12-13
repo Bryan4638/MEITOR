@@ -1,0 +1,38 @@
+@startuml
+class persona{
+    - name: String
+    - email: String
+    - edad: int
+    + actualizarPerfil(String, String, int): void
+}
+
+class jefe{
+    -id: String
+    -cargo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+
+class empleado{
+    -id: String
+    -zonaDeTrabajo: String
+    -tiempoDeTrabajo: String
+    -sueldo: float
+    + actualizar(): void
+}
+class empresa{
+    -nombre: String
+    - proveedores: ArralyList<Proveedor>
+    - jefes: Jefe
+    - empleados: Empleados
+    + despedirEmpleado(Empleado): void
+    + despedirJefe(Jefe): void
+}
+
+jefe --|> persona
+empleado --|> persona
+empresa "1" *-- "1...*" jefe
+empresa "1" *-- "1...*" empleado
+
+@enduml

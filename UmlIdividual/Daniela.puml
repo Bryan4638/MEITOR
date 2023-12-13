@@ -1,0 +1,43 @@
+@startuml
+
+class cliente {
+    - dinero: float
+    - permiso : Permiso
+    - venta : Venta
+    + actualizar() : void
+    + actualizarDinero(float) : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+class proveedor {
+    - dinero: float
+    - permiso: Permiso
+    - compra: Compra
+    + actualizar() : void
+    + actualizarPermiso( Permiso ) : void
+    + eliminarDatos() : void
+}
+
+class usuario {
+    - id: String
+    - name: String
+    - password : String
+    - email: String
+    + actualizarPerfil(String, String, String ): void
+}
+
+class permiso {
+    - id: String
+    - nombre: String
+}
+
+usuario "1...*" --* "1" permiso
+
+cliente --|> usuario
+proveedor --|> usuario
+
+
+
+
+@enduml

@@ -1,0 +1,58 @@
+@startuml
+
+
+class registroCompra{
+    - proveedor: Proveedor
+    - compra: Compra
+    - fecha: LocalDate
+    - hora: LocalTime
+    + logRegistroCompra(): void
+    + leerLogRegistroCompra(): ArralyList<RegistroCompra>
+    + eliminarRegistro(): void
+}
+
+class registroVenta{
+    - cliente: Cliente
+    - venta: Venta
+    - fecha: LocalDate
+    - hora: LOcalTime
+    + logRegistroVenta(): void
+    + leerLogRegistroVenta(): ArralyList<RegistroVenta>
+    + eliminarRegistro(): void
+}
+
+class prenda{
+    - id: String
+    - nombre: String
+    - image: String
+}
+
+class stock{
+    -idStock: String
+    - precioTotal: float
+    - precio : float
+    - cantidadEnStock: int
+    - empresa: Empresa
+    + incrementarStock(int): void
+    + decrementarStock(int): void
+    + verificarNivelStock(): int
+    + actualizarPrecio(float): void
+}
+
+registroCompra "1...*" --* "1" stock
+registroVenta "1...*" --* "1" stock
+prenda "1...*" --* "1" stock
+
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+@enduml

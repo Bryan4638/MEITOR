@@ -1,0 +1,14 @@
+@startuml Articulo
+!startsub Articulo
+skinparam ClassAttributeIconSize 0
+
+class articulo{
+    - categoria: Categoria
+    - stock: Stock
+    + validarDisponivilidad(): boolean
+    + aplicarDescuento(float): void
+}
+
+!endsub
+@enduml
+

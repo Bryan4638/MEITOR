@@ -1,0 +1,15 @@
+@startuml Venta
+!startsub Venta
+skinparam ClassAttributeIconSize 0
+
+class venta{
+    - idVenta: String
+    - cliente : Cliente
+    - articulos : ArrayList<Articulo>
+    - calcularValorDeVenta() : flaot
+    - finalizarVenta() : void
+    - eliminarArticulos(String) : void
+}
+
+!endsub
+@enduml

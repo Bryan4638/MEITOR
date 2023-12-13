@@ -1,0 +1,16 @@
+@startuml RegistroCompra
+!startsub RegistroCompra
+skinparam ClassAttributeIconSize 0
+
+class registroCompra{
+    - proveedor: Proveedor
+    - compra: Compra
+    - fecha: LocalDate
+    - hora: LocalTime
+    + logRegistroCompra(): void
+    + leerLogRegistroCompra(): ArralyList<RegistroCompra>
+    + eliminarRegistro(): void
+}
+
+!endsub
+@enduml
