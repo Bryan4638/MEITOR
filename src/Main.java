@@ -6,7 +6,7 @@ public class Main {
             public void run() {
                 InitDashboard init = new InitDashboard();
                 init.setLocationRelativeTo(null);
-                init.setVisible(true);//@
+                init.setVisible(true);// @
             }
         });
     }
